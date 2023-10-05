@@ -1,0 +1,29 @@
+17c17,18
+<     pass
+---
+>     # Keep track of how many votes each candidate has.
+>     vote_counts = {candidate: 0 for candidate in candidates}
+18a20,30
+>     for vote in ranked_votes:
+>         # This method of counting votes is likely the easiest way to tally up
+>         # votes in the grand scheme of things. An alternative is to take the
+>         # first candidate of each vote, but this requires you to go through and
+>         # edit all of the votes when you eliminate a candidate, which is more
+>         # work and rather error-prone.
+>         for candidate in vote:
+>             if candidate in candidates:
+>                 vote_counts[candidate] += 1
+>                 break
+>     return vote_counts
+19a32
+> 
+29c42,48
+<     pass
+---
+>     minimum_candidate = None
+>     minimum_votes = None
+>     for candidate, num_votes in vote_counts.items():
+>         if minimum_votes is None or num_votes < minimum_votes:
+>             minimum_candidate = candidate
+>             minimum_votes = num_votes
+>     return minimum_candidate

@@ -1,0 +1,64 @@
+7a8,19
+>     """
+>     Calculate the number of votes received by each candidate in a round of an
+>     IRV election.
+> 
+>     Args:
+>         candidates: A list representing the candidates still in the race.
+>         ranked_votes: A list of lists representing ranked votes for candidates,
+>             with each vote from most to least preferred.
+> 
+>     Returns:
+>         A dictionary mapping candidates to the number of votes they received.
+>     """
+12a25,34
+>     """
+>     Find and return the candidate who received the minimum number of votes.
+> 
+>     Args:
+>         vote_counts: A dictionary mapping candidates to the number of votes
+>             received in this round of the IRV election.
+> 
+>     Returns:
+>         A string representing the name of the candidate with the fewest votes.
+>     """
+16a39,57
+>     """
+>     Determine the winner of an alternative (instant runoff) election.
+> 
+>     Given a list of candidates and ranked votes, hold an alternative vote
+>     election and return the winning candidate and the number of votes they
+>     received in the final round. Each ranked vote does not need to rank all of
+>     the candidates, but if all of their chosen candidates are eliminated, the
+>     vote is not counted in the total (for determining a majority winner).
+> 
+>     Args:
+>         candidates: A list of strings representing the candidates' names.
+>         ranked_votes: A list of lists  of strings representing the ranked votes
+>             for candidates, with each list in order from most to least
+>             preferred.
+> 
+>     Returns:
+>         A tuple of a string and an integer, representing the winning candidate's
+>         name and the number of votes they won with in the final round.
+>     """
+21a63,81
+>     """
+>     Determine the winner of an alternative (instant runoff) election.
+> 
+>     Given a list of candidates and ranked votes, hold an alternative vote
+>     election and return the winning candidate and the number of votes they
+>     received in the final round. Each ranked vote does not need to rank all of
+>     the candidates, but if all of their chosen candidates are eliminated, the
+>     vote is not counted in the total (for determining a majority winner).
+> 
+>     Args:
+>         candidates: A list of strings representing the candidates' names.
+>         ranked_votes: A list of lists  of strings representing the ranked votes
+>             for candidates, with each list in order from most to least
+>             preferred.
+> 
+>     Returns:
+>         A tuple of a string and an integer, representing the winning candidate's
+>         name and the number of votes they won with in the final round.
+>     """

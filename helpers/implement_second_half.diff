@@ -1,0 +1,64 @@
+68c68,75
+<     pass
+---
+>     # We only need to do this process as long as there are multiple candidates
+>     # in the running, so repeat until a winner is chosen or until only one
+>     # candidate is left.
+>     while len(candidates) > 1:
+>         # Calculate how many votes each candidate gets, and the total number of
+>         # votes cast.
+>         vote_counts = tally_votes(candidates, ranked_votes)
+>         total_votes = sum(vote_counts.values())
+69a77,80
+>         # If there is an absolute winner, return the candidate and their votes.
+>         for candidate, num_votes in vote_counts.items():
+>             if num_votes > total_votes // 2:
+>                 return candidate, num_votes
+70a82,97
+>         # If there is no absolute winner, figure out who got the fewest votes
+>         # and eliminate them.
+>         minimum_candidate = get_minimum_candidate(vote_counts)
+>         candidates = [
+>             candidate
+>             for candidate in candidates
+>             if candidate != minimum_candidate
+>         ]
+> 
+>     # If there is only one candidate left, they are the winner, but we need to
+>     # count the number of valid votes.
+>     winner = candidates[0]
+>     num_votes = sum(1 for vote in ranked_votes if winner in vote)
+>     return winner, num_votes
+> 
+> 
+89c116,143
+<     pass
+---
+>     # We only need to do this process as long as there are multiple candidates
+>     # in the running, so repeat until a winner is chosen or until only one
+>     # candidate is left.
+>     while len(candidates) > 1:
+>         # Calculate how many votes each candidate gets, and the total number of
+>         # votes cast.
+>         vote_counts = tally_votes(candidates, ranked_votes)
+>         total_votes = sum(vote_counts.values())
+> 
+>         # If there is an absolute winner, return the candidate and their votes.
+>         for candidate, num_votes in vote_counts.items():
+>             if num_votes > total_votes // 2:
+>                 return candidate, num_votes
+> 
+>         # If there is no absolute winner, figure out who got the fewest votes
+>         # and eliminate them.
+>         minimum_candidate = get_minimum_candidate(vote_counts)
+>         candidates = [
+>             candidate
+>             for candidate in candidates
+>             if candidate != minimum_candidate
+>         ]
+> 
+>     # If there is only one candidate left, they are the winner, but we need to
+>     # count the number of valid votes.
+>     winner = candidates[0]
+>     num_votes = sum(1 for vote in ranked_votes if winner in vote)
+>     return winner, num_votes

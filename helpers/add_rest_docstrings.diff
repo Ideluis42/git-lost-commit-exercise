@@ -1,0 +1,72 @@
+8,9c8
+<     """
+<     Calculate the number of votes received by each candidate in a round of an
+---
+>     """Calculate the number of votes received by each candidate in a round of an
+12,14c11,12
+<     Args:
+<         candidates: A list representing the candidates still in the race.
+<         ranked_votes: A list of lists representing ranked votes for candidates,
+---
+>     :param candidates: A list representing the candidates still in the race.
+>     :param ranked_votes: A list of lists representing ranked votes for candidates,
+15a14
+>     :returns: A dictionary mapping candidates to the number of votes they received.
+17,18d15
+<     Returns:
+<         A dictionary mapping candidates to the number of votes they received.
+25,26c22
+<     """
+<     Find and return the candidate who received the minimum number of votes.
+---
+>     """Find and return the candidate who received the minimum number of votes.
+28,29c24
+<     Args:
+<         vote_counts: A dictionary mapping candidates to the number of votes
+---
+>     :param vote_counts: A dictionary mapping candidates to the number of votes
+30a26
+>     :returns: A string representing the name of the candidate with the fewest votes.
+32,33d27
+<     Returns:
+<         A string representing the name of the candidate with the fewest votes.
+39,40c33
+<     """
+<     Determine the winner of an alternative (instant runoff) election.
+---
+>     """Determine the winner of an alternative (instant runoff) election.
+48,50c41,42
+<     Args:
+<         candidates: A list of strings representing the candidates' names.
+<         ranked_votes: A list of lists  of strings representing the ranked votes
+---
+>     :param candidates: A list of strings representing the candidates' names.
+>     :param ranked_votes: A list of lists  of strings representing the ranked votes
+53,55c45
+< 
+<     Returns:
+<         A tuple of a string and an integer, representing the winning candidate's
+---
+>     :returns: A tuple of a string and an integer, representing the winning candidate's
+56a47
+> 
+63,64c54
+<     """
+<     Determine the winner of an alternative (instant runoff) election.
+---
+>     """Determine the winner of an alternative (instant runoff) election.
+72,74c62,63
+<     Args:
+<         candidates: A list of strings representing the candidates' names.
+<         ranked_votes: A list of lists  of strings representing the ranked votes
+---
+>     :param candidates: A list of strings representing the candidates' names.
+>     :param ranked_votes: A list of lists  of strings representing the ranked votes
+77,79c66
+< 
+<     Returns:
+<         A tuple of a string and an integer, representing the winning candidate's
+---
+>     :returns: A tuple of a string and an integer, representing the winning candidate's
+80a68
+> 
